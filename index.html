@@ -1,42 +1,51 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<title>EdTech Solutions</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Automation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!-- for the browser icon-->
-<link rel="icon" href="Images/logo.png">
 
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function ($) {
-		$(".scroll").click(function (event) {
-			event.preventDefault();
-			$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+<head>
+	<title>EdTech Solutions</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Automation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //for-mobile-apps -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- for the browser icon-->
+	<link rel="icon" href="Images/logo.png">
+
+	<!-- js -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- //js -->
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
 		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
+	</script>
+	<!-- start-smoth-scrolling -->
 </head>
 
 <body>
-<!-- banner -->
+	<!-- banner -->
 	<div class="banner" id="banner">
 		<div class="container">
 			<div class="logo">
@@ -51,128 +60,107 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	</div>
-<!-- //banner -->
-<!-- sticky-nav -->
+	<!-- //banner -->
+	<!-- sticky-nav -->
 	<div class="banner-bottom">
-	<div class="container">
-		<div class="fixed-header">
-			<div class="banner-bottom-nav">
-				<span class="menu"><img src="images/menu.png" alt=" "/></span>
+		<div class="container">
+			<div class="fixed-header">
+				<div class="banner-bottom-nav">
+					<span class="menu"><img src="images/menu.png" alt=" "/></span>
 					<div class="home-logo">
 						<a href="#banner"> <img src="images/logo.png" alt=" " class="img-responsive"/></a>
 					</div>
-						<nav class="cl-effect-1">
-							<ul class="nav1 center">
-								<li><a class="scroll" href="#rollcall">Roll Call</a></li>
-								<li><a class="scroll" href="#howitworks">How It works</a></li>
-								<li><a class="scroll" href="#ourStory">About Us</a></li>
-								<li><a class="scroll" href="#contact">Contact Us</a></li>
-							</ul>
-						</nav>
+					<nav class="cl-effect-1">
+						<ul class="nav1 center">
+							<li><a class="scroll" href="#rollcall">Roll Call</a></li>
+							<li><a class="scroll" href="#howitworks">How It works</a></li>
+							<li><a class="scroll" href="#ourStory">About Us</a></li>
+							<li><a class="scroll" href="#contact">Contact Us</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- script for menu -->
+				<script>
+					$("span.menu").click(function() {
+						$("ul.nav1").slideToggle(300, function() {
+							// Animation complete.
+						});
+					});
+				</script>
+				<!-- //script for menu -->
+
+				<!-- script-for sticky-nav -->
+				<script>
+					$(document).ready(function() {
+						var navoffeset = $(".banner-bottom").offset().top;
+						$(window).scroll(function() {
+							var scrollpos = $(window).scrollTop();
+							if (scrollpos >= navoffeset) {
+								$(".banner-bottom").addClass("fixed");
+							} else {
+								$(".banner-bottom").removeClass("fixed");
+							}
+						});
+
+					});
+				</script>
+				<!-- //script-for sticky-nav -->
 			</div>
-					<!-- script for menu -->
-					<script>
-						$( "span.menu" ).click(function() {
-						$( "ul.nav1" ).slideToggle( 300, function() {
-						 // Animation complete.
-						});
-						});
-					</script>
-					<!-- //script for menu -->
 
-						<!-- script-for sticky-nav -->
-						<script>
-						$(document).ready(function() {
-							 var navoffeset=$(".banner-bottom").offset().top;
-							 $(window).scroll(function(){
-								var scrollpos=$(window).scrollTop();
-								if(scrollpos >=navoffeset){
-									$(".banner-bottom").addClass("fixed");
-								}else{
-									$(".banner-bottom").removeClass("fixed");
-								}
-							 });
-
-						});
-						</script>
-					<!-- //script-for sticky-nav -->
 		</div>
-
 	</div>
-	</div>
-<!-- //sticky-nav -->
-<!-- welcome-company -->
+	<!-- //sticky-nav -->
+	<!-- welcome-company -->
 	<div class="welcome-company">
 		<div class="container">
 			<div class="welcome-company-grids">
 				<div class="col-md-4 welcome-company-grid-left">
-							<img src="images/welcome-main-0.jpg" alt=" " class="img-responsive"/>
-						<div class="clearfix"> </div>
+					<img src="images/welcome-main-0.jpg" alt=" " class="img-responsive" />
+					<div class="clearfix"> </div>
 				</div>
 				<div class="col-md-8 welcome-company-grid-right">
 					<h3>Welcome</h3>
-					<p>We fill in the gaps left by major manufacturers of education
-             management software. We provide the connective tissue that
-             makes your organization run most smoothly with modern
-             interfaces for faculty and staff leading to more effective
-             management post secondary institution issues.</p>
+					<p>We fill in the gaps left by major manufacturers of education management software. We provide the connective tissue that makes your organization run most smoothly with modern interfaces for faculty and staff leading to more effective management post
+						secondary institution issues.</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
-<!-- //welcome-company -->
-<div class="rollcall-main-0" id="rollcall">
-	<div class="ptext">
-		<span class="border">
-			Roll Call
-		</span>
-    <h3>We monitor attendance so you don't have to!</h3>
+	<!-- //welcome-company -->
+	<div class="rollcall-main-0" id="rollcall">
+		<div class="ptext">
+			<span class="border">
+					Roll Call
+				</span>
+			<h3>We monitor attendance so you don't have to!</h3>
+		</div>
 	</div>
-</div>
-<!-- rollcall -->
+	<!-- rollcall -->
 	<div class="rollcall">
 		<div class="container">
 			<div class="about-grids">
 				<div class="col-md-6 about-grid-left">
 					<h3>Why Now</h3>
-          <p>Students bring mobile devices to class everyday.
-            Now more than ever we need every second of valuable
-             lecture time possible</p>
-					<img src="images/rollcall-first-image.webp" alt=" " class="img-responsive"/>
-          <h2>The Roll Call System</h2>
-					<p>Roll Call is a personal class management system that
-            alleviates the tedious work of administrative tasks
-            outside of the classroom. It provides virtually effortless
-            attendance and roll reporting.</p>
-						<div class="company-grids">
-              <img src="images/rollcall-second-image.webp" alt=" " class="img-responsive"/>
-    					<p>At EdTech Solutions we understand that there is no standard
-                 attendance taking mechanism at colleges and universities in
-                 the United States, and attendance currently recorded and
-                 maintained manually by the professor of each class.
-                 This is a similar problem for many colleges and universities
-                 so care must be taken to ensure the integrity, accuracy, and
-                 availability of attendance records each semester.</p>
-               <p>
-                 We also understand that a major issue with students  college is
-                 their attendance in class. Many students do not attend class
-                 regularly and, as a result, receive low grades or fail.
-                 This seriously affects the persistence and progression of
-                 students. Many classes in the core education of STEM programs
-                 are large, over 50 but less than 150. Professors are responsible
-                 for recording the attendance of students at each meeting.
-                 Some actually call the roll orally, but most with large classes
-                 have the students sign-in on a roll sheet, which is analyzed at
-                 a later date. However, professors must spend time entering data
-                 in a roll book or spreadsheet manually during the semester.
-               </p>
-							<div class="clearfix"> </div>
-						</div>
+					<p>Students bring mobile devices to class everyday. Now more than ever we need every second of valuable lecture time possible</p>
+					<img src="images/rollcall-first-image.webp" alt=" " class="img-responsive" />
+					<h2>The Roll Call System</h2>
+					<p>Roll Call is a personal class management system that alleviates the tedious work of administrative tasks outside of the classroom. It provides virtually effortless attendance and roll reporting.</p>
+					<div class="company-grids">
+						<img src="images/rollcall-second-image.webp" alt=" " class="img-responsive" />
+						<p>At EdTech Solutions we understand that there is no standard attendance taking mechanism at colleges and universities in the United States, and attendance currently recorded and maintained manually by the professor of each class. This is a similar
+							problem for many colleges and universities so care must be taken to ensure the integrity, accuracy, and availability of attendance records each semester.</p>
+						<p>
+							We also understand that a major issue with students  college is their attendance in class. Many students do not attend class regularly and, as a result, receive low grades or fail. This seriously affects the persistence and progression of students. Many
+							classes in the core education of STEM programs are large, over 50 but less than 150. Professors are responsible for recording the attendance of students at each meeting. Some actually call the roll orally, but most with large classes have the students
+							sign-in on a roll sheet, which is analyzed at a later date. However, professors must spend time entering data in a roll book or spreadsheet manually during the semester.
+						</p>
+						<div class="clearfix"> </div>
+					</div>
 				</div>
 				<div class="col-md-6 about-grid-right">
 					<h3>The Soluction</h3>
-          <h4>At EdTECH Solutions, we have created system that will seamlessly:</h4>
+					<h4>At EdTECH Solutions, we have created system that will seamlessly:</h4>
 					<div class="col-sm-2 about-grid-lft">
 						<p>1</p>
 					</div>
@@ -194,7 +182,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h4>Be a simple and hassle free experience</h4>
 					</div>
 					<div class="clearfix"> </div>
-          <div class="col-sm-2 about-grid-lft">
+					<div class="col-sm-2 about-grid-lft">
 						<p>4</p>
 					</div>
 					<div class="col-sm-10 about-grid-rgt">
@@ -207,36 +195,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="testimonials">
 				<h3>Testimonials</h3>
 				<div class="col-md-4 testimonial">
-					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
-						saepe eveniet ut et voluptates repudiandae sint et molestiae non
-						recusandae.</p>
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+					</p>
 					<h4>Mark Flix</h4>
 				</div>
 				<div class="col-md-4 testimonial">
-					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
-						saepe eveniet ut et voluptates repudiandae sint et molestiae non
-						recusandae.</p>
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+					</p>
 					<h4>Mark Carl</h4>
 				</div>
 				<div class="col-md-4 testimonial">
-					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
-						saepe eveniet ut et voluptates repudiandae sint et molestiae non
-						recusandae.</p>
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+					</p>
 					<h4 id="howitworks">James Frik</h4>
 				</div>
-				<div class="clearfix" > </div>
+				<div class="clearfix"> </div>
 			</div>
-    <div class="images-below-testimonials">
-      <img src="images/rollcall-third-image.png" alt=" " class="img-responsive"/>
-      <div class="rollcall-fourth-image">
-        <img src="images/rollcall-fourth-image.png" alt=" " class="img-responsive"/>
-      	<div class="text-box">
-      		<span class="border">
-      			Roll Call System
-      		</span>
-      	</div>
-      </div>
-    </div>
+			<div class="images-below-testimonials">
+				<img src="images/rollcall-third-image.png" alt=" " class="img-responsive" />
+				<div class="rollcall-fourth-image">
+					<img src="images/rollcall-fourth-image.png" alt=" " class="img-responsive" />
+					<div class="text-box">
+						<span class="border">
+								Roll Call System
+							</span>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="team">
 			<div class="container">
@@ -323,55 +308,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-<!-- //about -->
-<!--divider img-->
-<div class="ourStory-main-0" id="ourStory">
-	<div class="ptext">
-		<span class="border">
-			Our Story
-		</span>
-    <h3>Your One-Stop Educational Technology Solution</h3>
+	<!-- //about -->
+	<!--divider img-->
+	<div class="ourStory-main-0" id="ourStory">
+		<div class="ptext">
+			<span class="border">
+					Our Story
+				</span>
+			<h3>Your One-Stop Educational Technology Solution</h3>
+		</div>
 	</div>
-</div>
-<!-- //divider img -->
-<!-- services -->
+	<!-- //divider img -->
+	<!-- services -->
 	<div id="services" class="services">
 		<div class="container">
 			<div class="ourStory">
-					<p>
-						A main issue of students passing classes in college is their
-						attendance in class. Many students do not attend class regularly
-						and, as a result, receive low grades or fail. This seriously
-						affects the persistence and progression of students. Many classes
-						in the core education of STEM programs are large, over 50 but less
-						than 150. Professors are responsible for recording the attendance
-						of students at each meeting. Some actually call the roll orally,
-						but most with large classes have the students sign-in on a roll
-						sheet, which is analyzed at a later date. However, professors must
-						spend time entering data in a roll book or spreadsheet manually
-						during the semester.
-					</p>
+				<p>
+					A main issue of students passing classes in college is their attendance in class. Many students do not attend class regularly and, as a result, receive low grades or fail. This seriously affects the persistence and progression of students. Many classes
+					in the core education of STEM programs are large, over 50 but less than 150. Professors are responsible for recording the attendance of students at each meeting. Some actually call the roll orally, but most with large classes have the students sign-in
+					on a roll sheet, which is analyzed at a later date. However, professors must spend time entering data in a roll book or spreadsheet manually during the semester.
+				</p>
 
 
-				</div>
-				<div class="clearfix"> </div>
 			</div>
+			<div class="clearfix"> </div>
 		</div>
-<!-- //services -->
-<!--divider img-->
-<div class="contact-main-0" id="contact">
-	<div class="ptext">
-		<span class="border">
-			Contact Us
-		</span>
 	</div>
-</div>
-<!-- //divider img -->
-<!-- contact -->
+	<!-- //services -->
+	<!--divider img-->
+	<div class="contact-main-0" id="contact">
+		<div class="ptext">
+			<span class="border">
+					Contact Us
+				</span>
+		</div>
+	</div>
+	<!-- //divider img -->
+	<!-- contact -->
 	<div class="contact">
 		<div class="container">
 			<div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1732.465386480095!2d-95.36148523571009!3d29.721764475488865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bfa6bde6b781%3A0x66af5befc63f4b2b!2sTexas+Southern+University!5e0!3m2!1sen!2sus!4v1504339115146" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1732.465386480095!2d-95.36148523571009!3d29.721764475488865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bfa6bde6b781%3A0x66af5befc63f4b2b!2sTexas+Southern+University!5e0!3m2!1sen!2sus!4v1504339115146"
+				  width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				<div class="map-color">
 					<div class="contact-info">
 						<h4>Contact Info</h4>
@@ -379,31 +357,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img src="images/stampname.png">
 						<br>
 						<p>3100 Cleburne St,
-							<span>Houston, TX 77004</span>
-							Phone Number: (713) 899-8111
+							<span>Houston, TX 77004</span> Phone Number: (713) 899-8111
 							<span>Roll.Call.TSU@gmail.com</span></p>
 						<form>
 							<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 							<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
 							<input type="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
-							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+							<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
 							<input type="submit" value="Send Message">
 						</form>
 					</div>
-					<div class="clearfix"> </div>
 				</div>
 			</div>
 		</div>
+		<div class="clearfix"> </div>
 	</div>
-<!-- //contact -->
-<!-- footer -->
+	<!-- //contact -->
+	<!-- footer -->
 	<div class="footer-bottom">
 		<div class="container">
-			<p>Copyright © 2017 by Roll Call Class Assistant.</a></p>
+			<p>Copyright © 2017 by Roll Call Class Assistant.</a>
+			</p>
 		</div>
 	</div>
-<!-- //footer -->
-<!-- here stars scrolling icon -->
+	<!-- //footer -->
+	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
 			/*
@@ -415,10 +393,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				};
 			*/
 
-			$().UItoTop({ easingType: 'easeOutQuart' });
-
+			$().UItoTop({
+				easingType: 'easeOutQuart'
 			});
+
+		});
 	</script>
-<!-- //here ends scrolling icon -->
+	<!-- //here ends scrolling icon -->
 </body>
+
 </html>
