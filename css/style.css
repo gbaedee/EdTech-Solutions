@@ -9,6 +9,7 @@ body a {}
 
 p {
   margin: 0;
+  font-size:20px;
 }
 
 ul, label {
@@ -39,6 +40,8 @@ body a:hover {
   -ms-background-size: cover;
   min-height: 850px;
   padding: 4em 0 0;
+  opacity: 0.5;
+   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .logo a {
@@ -613,11 +616,11 @@ body a:hover {
   padding: 20px;
 }
 
-.ptext .border {
+/*.ptext .border {
   background-color: #808080;
   color: #fff;
   padding: 20px;
-}
+}*/
 
 .ptext .border h3 {
   background-color: none;
