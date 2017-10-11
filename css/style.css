@@ -24,7 +24,10 @@ body a:hover {
 /*-- banner --*/
 
 .banner {
-  background-image: url(../images/main.jpeg);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(128,0,32, 0.5)
+  ),url(../images/main.jpeg);
   position: relative;
   background-position: center;
   background-size: 100%;
@@ -40,8 +43,6 @@ body a:hover {
   -ms-background-size: cover;
   min-height: 850px;
   padding: 4em 0 0;
-  opacity: 0.5;
-   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .logo a {
