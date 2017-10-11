@@ -1,7 +1,7 @@
 html, body {
-  font-size: 100%;
+  font-size: 24px;
   background: #fff;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Montserrat','Open Sans', sans-serif !important;
   overflow-x: hidden;
 }
 
@@ -604,7 +604,7 @@ body a:hover {
   width: 100%;
   text-align: center;
   color: #fff;
-  font-size: 27px;
+  font-size: 3.2em;
   letter-spacing: 8px;
   text-transform: capitalize;
 }
