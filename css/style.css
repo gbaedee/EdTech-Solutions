@@ -9,7 +9,7 @@ body a {}
 
 p {
   margin: 0;
-  font-size:20px;
+  font-size:.75em;
 }
 
 ul, label {
@@ -332,7 +332,7 @@ body a:hover {
 
 .welcome-company-grid-right p {
   color: #999;
-  font-size: 14px;
+  /* font-size: 14px; */
   margin: 0;
   line-height: 1.8em;
 }
@@ -427,6 +427,10 @@ body a:hover {
   margin: 2em 0 0;
   padding: 2em 0 0;
   border-top: 1px solid #f5f5f5;
+}
+
+.images-below-testimonials img{
+  margin: 0 auto;
 }
 
 .team {
@@ -581,8 +585,8 @@ body a:hover {
 
 .rollcall-fourth-image {
   position: relative;
-  display: inline-block;
 }
+
 
 .text-box {
   position: absolute;
